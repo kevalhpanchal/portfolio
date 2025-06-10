@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keval Panchal</title>
+    <link rel="icon" type="image/x-icon" href="kp.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <!--Navigation Bar-->
+      <header class="navbar">
+        <a class="logo" href="#">Keval</a>
+        <nav class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="https://wa.me/14379771628">Contact Me</a>
+        </nav>
+
+        <div class="btn-box">
+          <a href="mailto:keval1914@gmail.com" class="btn-link">
+            <button class="btn-orange btn-top">Hire Me</button>
+          </a>
+          <button id="openSidebar" class="btn-sidebar">
+            <i class="bx bx-menu-alt-right"></i>
+          </button>
+        </div>
+      </header>
+
+      <!--Navigation Bar Mobile-->
+      <div class="overlay" id="overlay">
+        <div class="sidebar" id="sidebar">
+          <button class="close-btn" id="closeBtn">
+            <i class="bx bx-x"></i>
+          </button>
+          <div class="sidebar-links">
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="https://wa.me/14379771628">Contact Me</a>
+          </div>
+          <a href="mailto:keval1914@gmail.com" class="sidebar-button">
+            <button class="btn-orange">Hire Me</button>
+          </a>
+        </div>
+      </div>
+
+      <!--Hero Section-->
+      <main class="hero-section">
+        <div class="hero-background">
+          <div class="smoke-background"></div>
+          <div class="hero-text">
+            <p>Hi, I am</p>
+            <h2>Keval Panchal</h2>
+            <h1>
+              I'm a
+              <span style="--i: 4" data-text="Frontend Developer"
+                >Frontend Developer</span
+              >
+              <span style="--i: 3" data-text="Backend Developer"
+                >Backend Developer</span
+              >
+              <span style="--i: 2" data-text="UI/UX Designer"
+                >UI/UX Designer</span
+              >
+              <span style="--i: 1" data-text="Fullstack Developer"
+                >Fullstack Developer</span
+              >
+            </h1>
+
+            <div class="social-icons">
+              <a class="btn_a" href="https://wa.me/14379771628""><i class="bx bxl-whatsapp"></i></a>
+              <a class="btn_a" href="https://www.instagram.com/thekevalpanchal"><i class="bx bxl-instagram"></i></a>
+              <a class="btn_a" href="https://www.linkedin.com/in/kevalpanchal/"><i class="bx bxl-linkedin"></i></a>
+            </div>
+
+            <div class="hero-buttons">
+              <a href="mailto:keval1914@gmail.com"><button class="btn-orange">Hire Me</button></a>
+              <a href="kevalv2025.pdf"><button class="btn-outline">Download Cv</button></a>
+            </div>
+
+            <div class="stats">
+              <div>
+                <p>3+</p>
+                <h6>Experiences</h6>
+              </div>
+              <div>
+                <p>20+</p>
+                <h6>Finished Projects</h6>
+              </div>
+              <div>
+                <p>80+</p>
+                <h6>Happy Clients</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-box">
+            <img src="kp.jpeg" alt="hero image" />
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!--Js Code To Display And Hide Sidebar-->
+    <script>
+      const overlay = document.getElementById("overlay");
+      const sidebar = document.getElementById("sidebar");
+      const openBtn = document.getElementById("openSidebar");
+      const closeBtn = document.getElementById("closeBtn");
+
+      //   Function to open sideBar
+      function openSidebar() {
+        overlay.classList.add("active");
+        sidebar.classList.add("active");
+      }
+
+      //   Function to close sideBar
+      function closeSidebar() {
+        overlay.classList.remove("active");
+        sidebar.classList.remove("active");
+      }
+
+      //   Event listeners for opening and closing sidebar
+      openBtn.addEventListener("click", openSidebar);
+      closeBtn.addEventListener("click", closeSidebar);
+
+      //   Close sidebar when clicking outside (on the overlay)
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+          closeSidebar();
+        }
+      });
+    </script>
+  </body>
+</html>
